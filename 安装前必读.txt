@@ -1,0 +1,7 @@
+运行：你的域名/install
+
+安装好后请把数据库里面的ecs_pay_log表删除
+再导入本目录下的ecs_pay_log.sql表在数据库中
+不导入会影响微信支付失败。
+ 
+琪琦源码淘宝店：https://shop36918457.taobao.com
