@@ -28,19 +28,6 @@ $data = array (
   ),
   2 => 
   array (
-    'cat_id' => '3',
-    'cat_name' => 'vivo',
-    'measure_unit' => '',
-    'parent_id' => '1',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '1',
-  ),
-  3 => 
-  array (
     'cat_id' => '2',
     'cat_name' => 'iphone',
     'measure_unit' => '',
@@ -52,10 +39,23 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '1',
   ),
+  3 => 
+  array (
+    'cat_id' => '3',
+    'cat_name' => 'vivo',
+    'measure_unit' => '',
+    'parent_id' => '1',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '1',
+  ),
   4 => 
   array (
-    'cat_id' => '6',
-    'cat_name' => '笔记本',
+    'cat_id' => '5',
+    'cat_name' => '平板',
     'measure_unit' => '',
     'parent_id' => '4',
     'is_show' => '1',
@@ -67,8 +67,8 @@ $data = array (
   ),
   5 => 
   array (
-    'cat_id' => '5',
-    'cat_name' => '平板',
+    'cat_id' => '6',
+    'cat_name' => '笔记本',
     'measure_unit' => '',
     'parent_id' => '4',
     'is_show' => '1',

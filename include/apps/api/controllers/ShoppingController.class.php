@@ -240,14 +240,14 @@ class ShoppingController extends CommonController {
 			echo json_encode(array('status'=>0,'err'=>'参数错误.'));
 			exit();
 		}
-		$product_spec = trim($_REQUEST['spec']);
+		$product_spec = explode(',',trim($_REQUEST['spec']));
 		$parent = 0;
 		// 查询：系统启用了库存，检查输入的商品数量是否有效
         // 查询
         $arrGoods = $this->model->table('goods')->field('goods_name,goods_number,extension_code')->where('goods_id =' . $goods_id)->find();
         $goodsnmber = model('Users')->get_goods_number($goods_id);
         $goodsnmber+=$number;
-        if (intval(C('use_storage')) > 0 && $arrGoods ['extension_code'] != 'package_buy') {
+		if (intval(C('use_storage')) > 0 && $arrGoods ['extension_code'] != 'package_buy') {
             if ($arrGoods ['goods_number'] < $goodsnmber) {
                 $result['message'] = sprintf(L('stock_insufficiency'), $arrGoods ['goods_name'], $arrGoods ['goods_number'], $arrGoods ['goods_number']);
                 if (C('use_how_oos') == 1){
@@ -256,7 +256,7 @@ class ShoppingController extends CommonController {
                 echo json_encode(array('status'=>0,'err'=>$result['message']));
             }
         }
-        // 检查：商品数量是否合法
+		// 检查：商品数量是否合法
         if (!is_numeric($number) || intval($number) <= 0) {
             $result ['message'] = L('invalid_number');
         } else {

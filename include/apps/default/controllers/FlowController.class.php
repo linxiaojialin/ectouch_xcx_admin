@@ -204,6 +204,7 @@ class FlowController extends CommonController {
                 die(json_encode($result));
             }
         }
+		
         // 检查：商品数量是否合法
         if (!is_numeric($goods->number) || intval($goods->number) <= 0) {
             $result ['error'] = 1;

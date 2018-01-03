@@ -474,7 +474,7 @@ class OrderModel extends BaseModel {
 
         /* 是否正在销售 */
         if ($goods['is_on_sale'] == 0) {
-            $res['content'] = L('not_on_sale');
+            $res['content'] = L('not_on_sale') . '004';
 			$res['suc'] = 0;
 			return $res;
         }
@@ -482,7 +482,7 @@ class OrderModel extends BaseModel {
         /* 不是配件时检查是否允许单独销售 */
         if (empty($parent) && $goods['is_alone_sale'] == 0) {
             
-			$res['content'] = L('cannt_alone_sale');
+			$res['content'] = L('cannt_alone_sale') . '000';
 			$res['suc'] = 0;
 			return $res;
         }
@@ -503,7 +503,7 @@ class OrderModel extends BaseModel {
             //检查：商品购买数量是否大于总库存
             if ($num > $goods['goods_number']) {
                 
-				$res['content'] = sprintf(L('shortage'), $goods['goods_number']);
+				$res['content'] = sprintf(L('shortage'), $goods['goods_number'] . '002');
 				$res['suc'] = 0;
 				return $res;
             }
@@ -513,7 +513,8 @@ class OrderModel extends BaseModel {
                 if (!empty($spec)) {
                     /* 取规格的货品库存 */
                     if ($num > $product_info['product_number']) {
-                        $res['content'] = sprintf(L('shortage'), $product_info['product_number']);
+						var_dump($product_info['product_number']);exit;
+                        $res['content'] = sprintf(L('shortage'), $product_info['product_number'] . '003');
 						$res['suc'] = 0;
 						return $res;
                     }

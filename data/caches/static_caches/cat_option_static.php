@@ -16,22 +16,6 @@ $data = array (
     'id' => '4',
     'name' => '电脑',
   ),
-  6 => 
-  array (
-    'cat_id' => '6',
-    'cat_name' => '笔记本',
-    'measure_unit' => '',
-    'parent_id' => '4',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '1',
-    'level' => 1,
-    'id' => '6',
-    'name' => '笔记本',
-  ),
   5 => 
   array (
     'cat_id' => '5',
@@ -47,6 +31,22 @@ $data = array (
     'level' => 1,
     'id' => '5',
     'name' => '平板',
+  ),
+  6 => 
+  array (
+    'cat_id' => '6',
+    'cat_name' => '笔记本',
+    'measure_unit' => '',
+    'parent_id' => '4',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '1',
+    'level' => 1,
+    'id' => '6',
+    'name' => '笔记本',
   ),
   1 => 
   array (
@@ -64,22 +64,6 @@ $data = array (
     'id' => '1',
     'name' => '手机',
   ),
-  3 => 
-  array (
-    'cat_id' => '3',
-    'cat_name' => 'vivo',
-    'measure_unit' => '',
-    'parent_id' => '1',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '1',
-    'level' => 1,
-    'id' => '3',
-    'name' => 'vivo',
-  ),
   2 => 
   array (
     'cat_id' => '2',
@@ -95,6 +79,22 @@ $data = array (
     'level' => 1,
     'id' => '2',
     'name' => 'iphone',
+  ),
+  3 => 
+  array (
+    'cat_id' => '3',
+    'cat_name' => 'vivo',
+    'measure_unit' => '',
+    'parent_id' => '1',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '1',
+    'level' => 1,
+    'id' => '3',
+    'name' => 'vivo',
   ),
 );
 ?>
