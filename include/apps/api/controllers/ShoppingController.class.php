@@ -173,7 +173,8 @@ class ShoppingController extends CommonController {
 		/* 删除所有赠品 */
 		$sql = "DELETE FROM " . $this->model->pre . "cart WHERE user_id = '" . $uid . "' AND is_gift <> 0";
 		$this->model->query($sql);
-
+		// 取得商品列表，计算合计
+        $cart = model('Order')->get_cart_goods($uid);
 		/*$check = $shopping->where('id='.intval($cart_id))->find();
 		if (!$check) {
 			echo json_encode(array('status'=>0,'err'=>'购物车信息错误！'));
@@ -192,7 +193,7 @@ class ShoppingController extends CommonController {
 
 		$res = $shopping->where('id ='.intval($cart_id).' AND uid='.intval($uid))->save($data);*/
 		if ($res) {
-			echo json_encode(array('status'=>1,'succ'=>'操作成功!'));
+			echo json_encode(array('status'=>1,'succ'=>'操作成功!','total_number'=>$cart['total']['total_number'],'goods_amount'=>$cart['total']['goods_amount']));
 			exit();
 		}else{
 			echo json_encode(array('status'=>0,'err'=>'操作失败.'));
